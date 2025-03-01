@@ -6,9 +6,8 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello world!")
-	first.Hello()
-
 	var conference_name = "Go Conference"
+	fmt.Println("Welcome to our conference booking application")
 	fmt.Println("Next conference scheduled is:", conference_name)
+	first.Hello()
 }

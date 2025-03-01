@@ -1,7 +1,10 @@
 package first
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func Hello() {
-	fmt.Println("Hello from another folder ...")
+	fmt.Println("The conference is scheduled at: ", time.Now().Format("2006-January-02"))
 }
