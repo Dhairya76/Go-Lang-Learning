@@ -1,9 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"GOLANG/first"
+	"fmt"
+)
 
 func main() {
 	fmt.Println("Hello world!")
-	fmt.Println("New Line")
-
+	first.Hello()
 }
