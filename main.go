@@ -26,7 +26,7 @@ func main() {
 	var first_name string
 	var last_name string
 	var email string
-	var user_tickets int
+	var user_tickets uint
 	// ask the user to enter name and number of tickets
 
 	fmt.Println("Enter your first name:")
@@ -48,8 +48,15 @@ func main() {
 	fmt.Println("How many tickets you wish to buy:")
 	fmt.Scan(&user_tickets)
 
-	fmt.Printf("Hey, %v %v your booking of  %v tickets was successful and tickets are mailed to %v \n", first_name, last_name, user_tickets, email)
+	// Now we will add the booking ticket logic
 
+	// Here the error will be type mismatch as one is int and another one is uint
+	// so that needs to be handled
+
+	remaining_tickets = remaining_tickets - user_tickets
+	fmt.Printf("Hey, %v %v your booking of  %v tickets was successful and tickets are mailed to %v \n", first_name, last_name, user_tickets, email)
 	// It prints Hey, Dhairya Thakker your booking of  3 tickets was successful and tickets are mailed to dt@gmail.com
+	fmt.Printf("This many tickets are now availabe for the conference %v \n", remaining_tickets)
+
 
 }
