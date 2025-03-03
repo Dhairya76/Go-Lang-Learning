@@ -58,5 +58,37 @@ func main() {
 	// It prints Hey, Dhairya Thakker your booking of  3 tickets was successful and tickets are mailed to dt@gmail.com
 	fmt.Printf("This many tickets are now availabe for the conference %v \n", remaining_tickets)
 
+	//---------------------------------------------------- Now lets move to ARRAYS and SLICES in GO --------------------------------------------------------------
+	// In GO we need to mention the length of the array at the time of declaration followed by data type
+
+	// var bookings = [50]string{"Thor", "Tony", "Steve"}
+
+	// Alternate way to declare Array which we are gonna use
+
+	var bookings [50]string
+
+	// Adding new values
+	bookings[0] = first_name + " " + last_name
+	// bookings[1] = first_name + " " + last_name
+
+	fmt.Printf("The whole array is: %v\n", bookings)
+	fmt.Printf("The first element in array is: %v\n", bookings[0])
+	fmt.Printf("The type of bookings is %T\n", bookings)
+	fmt.Printf("The length of array is %v\n", len(bookings))
+
+	// Slices helps us to define the a list that is more dynamic in size
+	// Slice is an abstraction of array
+	// Slices are more flexible and powerful
+
+	// Declare a slice
+
+	var first_slice []string
+
+	first_slice = append(first_slice, first_name+" "+last_name)
+
+	fmt.Printf("The whole slice is: %v\n", first_slice)
+	fmt.Printf("The first element in slice is: %v\n", first_slice[0])
+	fmt.Printf("The type of bookings is %T\n", first_slice)
+	fmt.Printf("The length of slice is %v\n", len(first_slice))
 
 }
