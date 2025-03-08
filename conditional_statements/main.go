@@ -107,6 +107,7 @@ func main() {
 	// Let's Refactor the above code using IF ELSE
 
 	// * ----------------------------------- IF ELSE LOOP -----------------------------------
+	// * ------------------------------- Let's also add USER INPUT VALIDATION -----------------------------------
 
 	for {
 		// Variables to store user input
@@ -128,7 +129,15 @@ func main() {
 		fmt.Println("How many tickets you wish to buy:")
 		fmt.Scan(&user_tickets)
 
-		if user_tickets <= remaining_tickets {
+		// * Now lets add user input validation here before we allow them to book tickets
+
+		var is_valid_name bool = len(first_name) >= 2 && len(last_name) >= 2
+		var is_valid_email bool = strings.Contains(email, "@")
+		var is_valid_ticket_count bool = user_tickets > 0 && user_tickets <= remaining_tickets
+
+		// * This are all the input validations
+
+		if is_valid_name && is_valid_email && is_valid_ticket_count {
 			// Updating the number of remaining tickets
 			remaining_tickets -= user_tickets
 
@@ -161,7 +170,17 @@ func main() {
 			}
 
 		} else {
-			fmt.Println("Total tickets remaining are:", remaining_tickets, "So please book your tickets accordingly")
+			if !is_valid_name {
+				fmt.Println("You have entered invalid name")
+			} 
+			if !is_valid_email {
+				fmt.Println("You have entered invalid email")
+			}
+			if !is_valid_ticket_count{
+				fmt.Println("Number of tickets entered is invalid")
+			}
+
+			// * Here we are using multiple if statements rather than else if because we need to check all conditions not just one
 
 		}
 
