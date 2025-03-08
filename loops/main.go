@@ -19,6 +19,8 @@ func main() {
 
 	// ----------------------------------- INFINITE LOOP -----------------------------------
 	//  ! Warning: This loop will keep running until manually stopped (Ctrl + C) or program exit conditions are added.
+
+	// TODO : Need to add conditional statements to end the loop
 	for {
 		// Variables to store user input
 		var first_name string
