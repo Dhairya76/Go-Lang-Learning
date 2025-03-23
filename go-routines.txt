@@ -1,0 +1,29 @@
+-------------------------------------------- GO ROUTINES --------------------------------------------
+
+1) Thread Type → Goroutines use "green threads," which are lightweight user-space threads, while OS threads are managed by the kernel.
+
+2) Abstraction → Goroutines abstract actual threads, making concurrency management easier, whereas OS threads are directly tied to system resources.
+
+3) Management → Goroutines are handled by the Go runtime, while OS threads are controlled by the operating system.
+
+4) Hardware Dependency → Goroutines are independent of hardware, whereas OS threads depend on the system's architecture.
+
+5) Cost → Goroutines are cheaper and lightweight, while OS threads consume more memory and processing power.
+
+6) Startup Time → Goroutines start quickly due to their lightweight nature, while OS threads have a higher startup time.
+
+
+-------------------------------------------- THREADS --------------------------------------------
+
+
+1) Thread Type → OS threads are managed by the kernel, whereas goroutines use lightweight "green threads" handled by the Go runtime.
+
+2) Abstraction → OS threads are directly tied to system resources, while goroutines abstract actual threads for easier concurrency.
+
+3) Management → OS threads are controlled by the operating system, while goroutines are managed within the Go runtime.
+
+4) Hardware Dependency → OS threads rely on the system’s architecture, whereas goroutines are hardware-independent.
+
+5) Cost → OS threads are more resource-intensive and expensive compared to goroutines, which are lightweight.
+
+6) Startup Time → OS threads take longer to initialize, while goroutines have a faster startup time.
